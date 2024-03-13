@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apache Installation</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Apache Installation</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="page1.html">Apache Installation</a></li>
+                <li><a href="page2.html">PHP Installation</a></li>
+                <li><a href="page3.html">MySQL Install and Config</a></li>
+                <li><a href="page4.html">Apache vHost Configuration</a></li>
+                <li><a href="page5.html">Testing The LAMP Stack</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Apache Installation.</h2>
+            <p>How to install Apache2 on Linux.</p>
+            <ol>
+                <li><strong>Open Terminal.</strong><br> On Linux, you do this by pressing <code>Ctrl + Alt + T</code> or searching for it in the Applications menu.</li>
+                <br>
+                <li><strong>Update the package index.</strong><br>This is not really needed, but it will make everything updated and on the latest version, which would avoid possible issues. To update the index, run this in the terminal: <br><code>sudo apt update</code> and enter your password.</li>
+                <br>
+                <li><strong>Install Apache.</strong><br>Once everything is updated and ready to go, run: <code>sudo apt install apache2</code> and press "Y" when prompted. This will install all of Apache's files onto your drive.</li>
+                <br>
+                <li><strong>Verify that Apache is installed.</strong><br>Once Apache has been installed, run this in a terminal to make sure it was installed correctly: <code>sudo systemctl status apache2</code>. If everything is good, you should see an output that indicates everything is ready to go!</li>
+                <br>
+                <li><strong>Access the Apache demo page.</strong><br>Finally, open a browser and type <code>http://localhost or just simply "localhost"</code>. Congrats! Apache is now ready to be used!</li>
+            </ol>
+        </main>
+    </body>
+</html>

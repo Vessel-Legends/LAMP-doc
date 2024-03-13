@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHP Installation</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>PHP Installation</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="page1.html">Apache Installation</a></li>
+                <li><a href="page2.html">PHP Installation</a></li>
+                <li><a href="page3.html">MySQL Install and Config</a></li>
+                <li><a href="page4.html">Apache vHost Configuration</a></li>
+                <li><a href="page5.html">Testing The LAMP Stack</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>PHP Installation.</h2>
+            <p>How to install PHP v8.2 on Linux.</p>
+            <ol>
+                <li><strong>Add the PHP repo.</strong><br>Unlike on Windows, you have to use the Linux package index to install PHP 8.2. Open the terminal and run these 2 commands: <br><code>sudo add-apt-repository ppa:ondrej/php</code><br><code>sudo apt update</code></li>
+                <br>
+                <li><strong>Install PHP.</strong><br>Once the repo is added and ready, you can actually install PHP and it's extensions. To do that, run <code>sudo apt install php8.2 php8.2-common php8.2-cli</code> in the terminal and press "Y" when and if prompted.</li>
+                <br>
+                <li><strong>Verify the installation.</strong><br>After everything is installed and ready, it's time to verify if everything worked. Run <code>php -v</code>. You should see the output that shows the version of PHP.</li>
+                <br>
+                <li><strong>Install PHP extensions (optional).</strong>This step is 100% optional so you dont have to do this step, but if you want to install extensions, using the terminal, type: <code>apt search php8.2-</code>, and once you find the extension you want, type <code>sudo apt install php8.2-{extension_name}</code>. Congrats! PHP has been installed!</li>
+            </ol>
+        </main>
+    </body>
+</html>

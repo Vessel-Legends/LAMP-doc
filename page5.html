@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing the LAMP Stack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Testing the LAMP Stack</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="page1.html">Apache Installation</a></li>
+            <li><a href="page2.html">PHP Installation</a></li>
+            <li><a href="page3.html">MySQL Install and Config</a></li>
+            <li><a href="page4.html">Apache vHost Configuration</a></li>
+            <li><a href="page5.html">Testing The LAMP Stack</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Testing the LAMP Stack.</h2>
+        <p>How to test your current LAMP stack to make sure that everything is working properly.</p>
+        <ol>
+            <li><strong>Verify Apache:</strong><br> Open a web browser and enter <code>http://localhost</code> in the address bar. If Apache is installed, you should see the default welcome page.</li>
+            <br>
+            <li><strong>Test PHP:</strong><br> Create a new PHP file in the document root directory of your Apache virtual host. For example, create a file named <code>info.php</code> with the following content:<br><pre><code>&lt;?php
+phpinfo();
+?&gt;
+</code></pre>Save the file and access it in your web browser (e.g., <code>http://your_domain.com/info.php</code>). If PHP is working, you should see a page displaying PHP info.</li>
+            <br>
+            <li><strong>Check MySQL:</strong><br> Open terminal and log in to the MySQL shell: <code>sudo mysql</code>. Once logged in, run this following command to all databases:<br><code>SHOW DATABASES;</code><br>If MySQL is working, you should see a list of databases.</li>
+            <br>
+            <li><strong>Create a Test Database:</strong><br> While still in the shell, you can create a test database to further verify MySQL functionality: <code>CREATE DATABASE test_db;</code>. Verify that the database is created by running: <code>SHOW DATABASES;</code><br>You should see the database in the list.</li>
+            <br>
+            <li><strong>Test Connectivity:</strong><br> You can now test database connectivity by creating a PHP script that connects to MySQL and selects data from a table in the test database. If the script executes, it indicates that PHP can communicate with MySQL successfully. Congratulations!</li>
+        </ol>
+    </main>
+</body>
+</html>

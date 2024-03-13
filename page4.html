@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Virtual Host Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Apache Virtual Host Configuration</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="page1.html">Apache Installation</a></li>
+            <li><a href="page2.html">PHP Installation</a></li>
+            <li><a href="page3.html">MySQL Install and Config</a></li>
+            <li><a href="page4.html">Apache vHost Configuration</a></li>
+            <li><a href="page5.html">Testing The LAMP Stack</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Apache Virtual Host Configuration.</h2>
+        <p>How to set up an Apache Virtual Host.</p>
+        <ol>
+            <li><strong>Create a New Virtual Host Configuration File:</strong><br> Navigate to the Apache configuration directory: <code>cd /etc/apache2/sites-available</code><br>Create a new configuration file for your virtual host: <code>sudo nano your_domain.conf</code><br>Replace <code>your_domain.conf</code> with your desired configuration file name.</li>
+            <br>
+            <li><strong>Configure the Virtual Host:</strong><br> Inside the configuration file, add the following content:<pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin webmaster@your_domain.com
+    ServerName your_domain.com
+    ServerAlias www.your_domain.com
+    DocumentRoot /var/www/your_domain
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;
+</code></pre>Replace <code>your_domain.com</code> with your actual domain name and adjust other settings.</li>
+            <br>
+            <li><strong>Create Document Root Directory:</strong><br> Create the document root directory specified in the virtual host configuration: <code>sudo mkdir /var/www/your_domain</code><br>Replace <code>your_domain</code> with your actual domain name.</li>
+            <br>
+            <li><strong>Set Permissions:</strong><br> Set appropriate permissions for the document root directory: <code>sudo chown -R www-data:www-data /var/www/your_domain</code><br><code>sudo chmod -R 755 /var/www/your_domain</code></li>
+            <br>
+            <li><strong>Enable the Virtual Host:</strong><br> Enable the virtual host configuration by creating a symbolic link to the <code>sites-enabled</code> directory: <code>sudo ln -s /etc/apache2/sites-available/your_domain.conf /etc/apache2/sites-enabled/</code></li>
+            <br>
+            <li><strong>Restart Apache:</strong><br> After enabling the virtual host, restart Apache to apply the changes: <code>sudo systemctl restart apache2</code></li>
+            <br>
+            <li><strong>Test the Virtual Host:</strong><br> Open a web browser and enter your domain name in the address bar (i.e <code>http://your_domain.com</code>). If configured correctly, you should see your website. Congrats!</li>
+        </ol>
+    </main>
+</body>
+</html>

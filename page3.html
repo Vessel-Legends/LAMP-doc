@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MySQL Install and Config</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>MySQL Install and Config</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="page1.html">Apache Installation</a></li>
+                <li><a href="page2.html">PHP Installation</a></li>
+                <li><a href="page3.html">MySQL Install and Config</a></li>
+                <li><a href="page4.html">Apache vHost Configuration</a></li>
+                <li><a href="page5.html">Testing The LAMP Stack</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>MySQL Installation and Configuration.</h2>
+            <p>How to install MySQL on Linux and configure it.</p>
+            <ol>
+            <li><strong>Install MySQL Server.</strong><br> Open a terminal window and run the following command to install MySQL Server: <code>sudo apt install mysql-server</code></li>
+            <br>
+            <li><strong>Secure Installation.</strong><br> After the installation is complete, run the following command to secure your MySQL installation: <code>sudo mysql_secure_installation</code><br>Follow the prompts to set a root password and configure other security settings.</li>
+            <br>
+            <li><strong>Access Shell.</strong><br> Once MySQL is installed, you can access the shell by running the following command: <code>sudo mysql</code></li>
+            <br>
+            <li><strong>Create a New MySQL User.</strong><br> Inside the MySQL shell, you can create a new user with the following command: <code>CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';</code> Replace <code>username</code> and <code>password</code> with your desired values.</li>
+            <br>
+            <li><strong>Create a New MySQL Database.</strong><br> To create a new database, use the following command: <code>CREATE DATABASE dbname;</code><br>Replace <code>dbname</code> with the name of your database.</li>
+            <br>
+            <li><strong>Grant Privileges to the User.</strong><br> After creating the user and database, grant privileges to the user for the database: <code>GRANT ALL PRIVILEGES ON dbname.* TO 'username'@'localhost';</code><br>Replace <code>dbname</code> and <code>username</code> with your database and user names.</li>
+            <br>
+            <li><strong>Flush Privileges and Exit.</strong><br> After granting privileges, flush the privileges to apply changes: <code>FLUSH PRIVILEGES;</code> Exit the MySQL shell by typing:<br><code>exit;</code></li>
+            </ol>
+        </main>
+    </body>
+</html>
